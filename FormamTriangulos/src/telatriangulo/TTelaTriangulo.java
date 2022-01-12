@@ -15,6 +15,8 @@ public class TTelaTriangulo extends javax.swing.JFrame {
      */
     public TTelaTriangulo() {
         initComponents();
+        
+        panRes.setVisible(false);
     }
 
     /**
@@ -37,7 +39,7 @@ public class TTelaTriangulo extends javax.swing.JFrame {
         lbl_B = new javax.swing.JLabel();
         lbl_C = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        panRes = new javax.swing.JPanel();
         lblForma = new javax.swing.JLabel();
         lblTipo = new javax.swing.JLabel();
 
@@ -45,6 +47,7 @@ public class TTelaTriangulo extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/telatriangulo/Imagem1_abc.png"))); // NOI18N
 
+        sli_A.setMaximum(50);
         sli_A.setValue(0);
         sli_A.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -52,6 +55,7 @@ public class TTelaTriangulo extends javax.swing.JFrame {
             }
         });
 
+        sli_B.setMaximum(50);
         sli_B.setValue(0);
         sli_B.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -59,6 +63,7 @@ public class TTelaTriangulo extends javax.swing.JFrame {
             }
         });
 
+        sli_C.setMaximum(50);
         sli_C.setValue(0);
         sli_C.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -92,26 +97,28 @@ public class TTelaTriangulo extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(153, 102, 255)));
+        panRes.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(153, 102, 255)));
 
-        lblForma.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblForma.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblForma.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        lblTipo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblTipo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblTipo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout panResLayout = new javax.swing.GroupLayout(panRes);
+        panRes.setLayout(panResLayout);
+        panResLayout.setHorizontalGroup(
+            panResLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panResLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(panResLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblForma, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
                     .addComponent(lblTipo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(43, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        panResLayout.setVerticalGroup(
+            panResLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panResLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(lblForma, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -128,7 +135,7 @@ public class TTelaTriangulo extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(panRes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(49, 49, 49)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -187,7 +194,7 @@ public class TTelaTriangulo extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(panRes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -215,17 +222,35 @@ public class TTelaTriangulo extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
+        panRes.setVisible(true);
+        
         //Lado A
-        int ladoA = Integer.parseInt(lbl_A.getText());
+        int ladoA = sli_A.getValue();
         
         //Lado B
-        int ladoB = Integer.parseInt(lbl_B.getText());
+        //int ladoB = Integer.parseInt(lbl_B.getText());
+        int ladoB = sli_B.getValue();
         
         //Lado C
-        int ladoC = Integer.parseInt(lbl_C.getText());
+        //int ladoC = Integer.parseInt(lbl_C.getText());
+        int ladoC =sli_C.getValue();
         
-        if (ladoA+ladoB > ladoC) && (ladoB + ladoC > ladoA)  {
+          
+        if ((ladoA + ladoB > ladoC) && (ladoB + ladoC > ladoA)&&(ladoA + ladoC> ladoB)) {
            lblForma.setText("Forma um triângulo"); 
+           
+            if((ladoA == ladoB) &&(ladoB == ladoC)&&(ladoA == ladoC)){
+                lblTipo.setText("EQUILÁTERO");
+            } else if ((ladoA != ladoB)&&(ladoB != ladoC)&&(ladoC !=ladoA)){
+                lblTipo.setText("ESCALENO");
+            }else{
+                lblTipo.setText("ISOSCELES");
+            }
+            
+           
+        }else{
+            lblForma.setText("Nao formam um triângulo");
+            lblTipo.setText("---------");
         }
         
         
@@ -274,12 +299,12 @@ public class TTelaTriangulo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblForma;
     private javax.swing.JLabel lblTipo;
     private javax.swing.JLabel lbl_A;
     private javax.swing.JLabel lbl_B;
     private javax.swing.JLabel lbl_C;
+    private javax.swing.JPanel panRes;
     private javax.swing.JSlider sli_A;
     private javax.swing.JSlider sli_B;
     private javax.swing.JSlider sli_C;
