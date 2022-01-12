@@ -14,6 +14,7 @@ public class TelaCalc extends javax.swing.JFrame {
      */
     public TelaCalc() {
         initComponents();
+        panCalc.setVisible(false);
     }
 
     /**
@@ -29,7 +30,7 @@ public class TelaCalc extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         spn_num = new javax.swing.JSpinner();
         btn_calcular = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        panCalc = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -58,7 +59,7 @@ public class TelaCalc extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(51, 255, 255));
+        panCalc.setBackground(new java.awt.Color(51, 255, 255));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -100,56 +101,56 @@ public class TelaCalc extends javax.swing.JFrame {
         lbl_rzc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lbl_rzc.setText("0");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout panCalcLayout = new javax.swing.GroupLayout(panCalc);
+        panCalc.setLayout(panCalcLayout);
+        panCalcLayout.setHorizontalGroup(
+            panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panCalcLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(panCalcLayout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbl_rzc))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(panCalcLayout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbl_rzq))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panCalcLayout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbl_cubo))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panCalcLayout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbl_quad))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panCalcLayout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(61, 61, 61)
                         .addComponent(lbl_div2)))
                 .addContainerGap(72, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        panCalcLayout.setVerticalGroup(
+            panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panCalcLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(lbl_div2))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(lbl_quad))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(lbl_cubo))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(lbl_rzq))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(lbl_rzc))
                 .addContainerGap(26, Short.MAX_VALUE))
@@ -163,7 +164,7 @@ public class TelaCalc extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(panCalc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(24, 24, 24)
@@ -189,7 +190,7 @@ public class TelaCalc extends javax.swing.JFrame {
                     .addComponent(spn_num, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_calcular))
                 .addGap(35, 35, 35)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panCalc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(48, Short.MAX_VALUE))
         );
 
@@ -197,22 +198,40 @@ public class TelaCalc extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_calcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_calcularActionPerformed
-        float div_2, ao_cubo, quadrado,raiz_quadrada,raiz_cubica ;
-        int numero ;
         
+        panCalc.setVisible(true);
+        
+        //Número no seletor
+        int numero ;
         numero = Integer.parseInt(spn_num.getValue().toString());
         
-        div_2 = numero %2;
-        ao_cubo = (float)Math.pow(numero, 3);
-        quadrado = (float)Math.pow(numero, 2);
-        raiz_quadrada = (float) Math.sqrt(numero);
-        raiz_cubica = (float)Math.cbrt(numero);
+    //RESTO DA DIVISÃO
+        int resto = numero %2;
+        //lbl_div2.setText.(Integer.toString(resto));
         
-        lbl_div2.setText.(Float.toString(div_2));
-        lbl_quad.setText(Float.toString(quadrado));
-        lbl_cubo.setText(Float.toString(ao_cubo));
-        lbl_rzq.setText(Float.toString(raiz_quadrada));
-        lbl_rzc.setText(Float.toString(raiz_cubica));
+    //NÚMERO AO QUADRADO
+        Double quadrado = Math.pow(numero, 2);
+        lbl_quad.setText(Double.toString(quadrado));
+    
+    //NÚMERO AO CUBO
+        Double ao_cubo = Math.pow(numero, 3);
+        lbl_cubo.setText(Double.toString(ao_cubo));
+    
+    //RAIZ QUADRADA
+        Double raiz_quadrada =  Math.sqrt(numero);
+         lbl_rzq.setText(String.format("%.2f",raiz_quadrada));
+        
+    //RAIZ CÚBICA
+        Double raiz_cubica = Math.cbrt(numero);   
+        lbl_rzc.setText(String.format("%.2f",raiz_cubica));
+        
+        
+           
+        
+        
+        
+       
+        
         
         
         
@@ -262,12 +281,12 @@ public class TelaCalc extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbl_cubo;
     private javax.swing.JLabel lbl_div2;
     private javax.swing.JLabel lbl_quad;
     private javax.swing.JLabel lbl_rzc;
     private javax.swing.JLabel lbl_rzq;
+    private javax.swing.JPanel panCalc;
     private javax.swing.JSpinner spn_num;
     // End of variables declaration//GEN-END:variables
 }
