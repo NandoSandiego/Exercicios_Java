@@ -29,3 +29,9 @@
 /FormamTriangulos/build/
 *.xml
 Aula_9/manifest.mf
+*.properties
+Aula_9/src/aula_9/Aula_9.java
+/Fatorial/nbproject/private/
+/Fatorial/build/
+/NetBeansProjects/PrimeiroPrograma/build/
+/NetBeansProjects/PrimeiroPrograma/dist/
