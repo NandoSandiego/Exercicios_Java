@@ -14,7 +14,9 @@ public class BancoMundial {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        ContaBanco cliente1 = new ContaBanco("Nando", "CC");
+        
+        System.out.println(cliente1.getNumConta());
     }
     
 }
