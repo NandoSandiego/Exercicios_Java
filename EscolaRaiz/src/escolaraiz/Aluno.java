@@ -12,7 +12,7 @@ public class Aluno extends Pessoa {
     
 //METODOS PRICIPAIS
 
-    public void pagarMenssalidade(float mens){
+    public void pagarMensalidade(float mens){
         this.mensalidade +=mens;        
     }
     
