@@ -77,6 +77,7 @@ public class Luta {
     public Luta() {
         this.rounds = 0;
         this.aprovada = false;
+        
     }
     
     //Getters e Setters
