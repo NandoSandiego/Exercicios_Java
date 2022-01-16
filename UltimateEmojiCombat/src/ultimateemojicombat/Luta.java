@@ -1,6 +1,8 @@
 
 package ultimateemojicombat;
 
+import java.util.Random;
+
 
 public class Luta {
    //Atributos
@@ -13,14 +15,59 @@ public class Luta {
     
     //Métodos Principais
     
-    public void marcarLuta(){
-        if(getDesafiado().getCategoria() == getDesafiante().getCategoria()){
-            this.setAprovada(true);
-        }
+    public void marcarLuta(Lutador lutador1, Lutador lutador2 ){
+        
+        
+            if(lutador1 != lutador2){
+                 this.setAprovada(true);
+                 
+                 this.desafiado = lutador1;
+                 this.desafiante = lutador2;
+            } else {
+                this.setAprovada(false);
+                this.desafiado = null;
+                this.desafiante = null;
+            }
+        
         
     }
     
     public void lutar(){
+        
+        if(this.getAprovada()){
+            this.desafiado.apresentar();
+            this.desafiante.apresentar();
+            
+            //int vencedor = (int)  Math.random()*(1-2);
+            
+            Random alea = new Random();
+            int vencedor = alea.nextInt(3); 
+            
+            switch (vencedor){
+                case 0: //Empate 
+                    System.out.println("Empatou!!!");
+                    this.desafiado.empatarLuta();
+                    this.desafiante.empatarLuta();
+                    break;
+                    
+                case 1: 
+                    System.out.println(this.getDesafiado().getNome()+" GANHOU A LUTA!!");
+                    this.desafiado.ganharLuta();
+                    this.desafiante.perderLuta();
+                    break;
+                    
+                case 2:
+                    System.out.println(this.getDesafiante().getNome()+" GANHOU A LUTA!!!");
+                    this.desafiado.perderLuta();
+                    this.desafiante.ganharLuta();
+                    break;
+                    
+            }
+            
+            
+        }else{
+            System.out.println("Luta nao pode acontecer...");
+        }
         
     }
     

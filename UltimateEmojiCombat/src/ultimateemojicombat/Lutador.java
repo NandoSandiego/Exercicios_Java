@@ -51,18 +51,18 @@ public class Lutador {
     
     public void status(){
         System.out.println(this.getNome()+", do "+this.getNacionalidade());
-        System.out.println("Vitorias: "+this.getVitorias()+"Derrotas: "+this.getDerrotas()+" e "+this.getEmpates()+" empates");
+        System.out.println("Vitorias: "+this.getVitorias()+" Derrotas: "+this.getDerrotas()+" e "+this.getEmpates()+" empates");
     }
     
-    public void ganhar(){
+    public void ganharLuta(){
         this.setVitorias(this.getVitorias()+1);
     }
     
-    public void perder(){
+    public void perderLuta(){
         this.setDerrotas(this.getDerrotas()+1);
     }
     
-    public void empatar(){
+    public void empatarLuta(){
         this.setEmpates(this.getEmpates()+1);
     }
     
