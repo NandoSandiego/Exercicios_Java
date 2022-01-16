@@ -2,7 +2,7 @@
 package escolaraiz;
 
 
-public class Bolsista {
+public class Bolsista extends Aluno{
     
     private float bolsa;
     
